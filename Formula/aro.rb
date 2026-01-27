@@ -10,6 +10,9 @@ class Aro < Formula
   depends_on :macos
   depends_on arch: :arm64
 
+  # LLVM 20 is required for native compilation (aro build)
+  depends_on "llvm@20"
+
   def install
     bin.install "aro"
   end
